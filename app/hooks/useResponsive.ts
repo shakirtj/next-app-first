@@ -19,7 +19,7 @@ const useResponsive = (breakpoint: number) => {
         window.removeEventListener("resize", handleResize);
       }
     };
-  }, [breakpoint, window.innerWidth]);
+  }, [breakpoint]);
 
   return isVisible;
 };

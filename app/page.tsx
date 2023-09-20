@@ -6,10 +6,8 @@ import Carousel from './components/carousel-image';
 export default function Home() {
   return (
     <>
-      <BikeHeader />
       <BannerImage />
       <Carousel />
-      <MainFooter />
 
     </>
   );
