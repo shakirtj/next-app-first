@@ -2,14 +2,20 @@ import React from "react";
 import styles from "./index.module.css";
 import Image from "next/image";
 
-const BannerImage = () => {
+interface bannerimage {
+  image_src: string;
+  width: number;
+  height: number;
+}
+
+const BannerImage = (props: bannerimage) => {
   return (
     <Image
-    src="/assets/images/banner1.webp"
+    src={props.image_src}
     alt="Logo"
     className="logo_mg"
-    width={1920}
-    height={600}
+    width={props.width}
+    height={props.height || 900}
     priority
   />
   );

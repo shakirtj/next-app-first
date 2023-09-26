@@ -20,3 +20,29 @@ body {
   padding-left: 25px;
   margin: 0 auto;
 }
+.slick-dots{
+  margin-bottom: 25px !important;
+}
+.primary_btn{
+  font-size: 16px;
+    line-height: 36px;
+    padding: 0 15px;
+    border-radius:4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-color: #e77b35;
+    border: 1px solid #e77b35;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    width: auto;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    color: #fff;
+    width: 100%;
+}
+.primary_btn:hover{
+  background-color:#eb630b;
+    transition: .2s ease-in-out;
+}

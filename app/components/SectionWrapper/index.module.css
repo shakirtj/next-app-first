@@ -1,0 +1,24 @@
+.sectionMain{
+    padding-top: 2.5rem;
+}
+.sectionMain h1, .sectionMain h2{
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: .8px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+.sectionMain h1:before, .sectionMain h2:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    left: 0;
+    bottom: -10px;
+    border-radius: 2px;
+    background-clip: padding-box;
+    background-color: #e77b35;
+}

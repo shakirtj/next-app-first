@@ -252,3 +252,10 @@ export const S3_BUCKET_URL =
     { title:"info@bikejunction.in", url:"mailto:info@bikejunction.in", imagePath:"/assets/images/email_icon.webp" },
     { title:"+91-9770-974-974", url:"tel:+919770974974", imagePath:"/assets/images/phone_icon.webp" },
   ]
+
+  export const TabArray =[
+    { title:"bike", id:0, },
+    { title:"Scooter", id:1, },
+    { title:"Electric", id:2, },
+    { title:"all", id:3, },
+  ]
