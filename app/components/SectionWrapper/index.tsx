@@ -6,10 +6,11 @@ import Link from "next/link";
 interface sectionWrapper {
   heading?: string;
   viewall_url?: string;
+  viewall_title?:string;
   children?: React.ReactNode[] | React.ReactNode;
  
 }
-const SectionWrapper = ({ heading, viewall_url, children }: sectionWrapper) => {
+const SectionWrapper = ({ heading, viewall_url, viewall_title, children }: sectionWrapper) => {
   return (
     <>
       <section
@@ -18,7 +19,8 @@ const SectionWrapper = ({ heading, viewall_url, children }: sectionWrapper) => {
         {heading ? <h2>{heading}</h2> : null}
         {children}
         <div className={Style.viewall}>
-            {viewall_url ? (<Link href={viewall_url}>View all</Link>):null}
+            {viewall_url ? (<Link href={viewall_url}>{viewall_title}</Link>):null}
+            <img src="https://assets.tractorjunction.com/bike-junction/assets/frontend/images/icons/linkarrow.svg?format=png&width=12&height=12" alt="arrow img" />
         </div>
       </section>
     </>

@@ -5,6 +5,7 @@ import BannerImage from '../banner-image';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import classNames from 'classnames';
+import { ResponsiveCarousalObjectType } from '@/app/utils/constants';
 
 interface carouselimage {
   autoplay?: boolean,
@@ -16,6 +17,7 @@ interface carouselimage {
     arrows?: boolean,
     children?:React.ReactElement[] | React.ReactElement,
     className?:string
+    responsive?: ResponsiveCarousalObjectType[];
 }
  
 
@@ -28,7 +30,8 @@ const MyCarousel = ({
     slidesToScroll,
     className,
     arrows,
-    children
+    children,
+    responsive
 }: carouselimage) => {
   const settings: any= {
     autoplay: autoplay,
@@ -38,7 +41,8 @@ const MyCarousel = ({
     slidesToShow: slidesToShow,
     slidesToScroll: slidesToScroll,
     arrows: arrows,
-    className,
+    responsive:responsive,
+    className
   };
 
   

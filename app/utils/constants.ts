@@ -259,3 +259,23 @@ export const S3_BUCKET_URL =
     { title:"Electric", id:2, },
     { title:"all", id:3, },
   ]
+  export type ResponsiveCarousalObjectType = {
+    breakpoint: number;
+    settings: {
+      slidesToShow: number;
+      slidesToScroll: number;
+      arrows?: boolean;
+      initialSlide?: number;
+    };
+  };
+
+  export const BrandArray =[
+    { title:"bike", image:"/assets/images/bajaj-logo.webp", urlLink:"/new-bikes", id:0, },
+    { title:"Scooter", image:"/assets/images/bajaj-logo.webp", urlLink:"/new-bikes", id:1, },
+    { title:"Electric", image:"/assets/images/bajaj-logo.webp", urlLink:"/new-bikes", id:2, },
+    { title:"all", image:"/assets/images/bajaj-logo.webp", urlLink:"/new-bikes", id:3, },
+    { title:"bike", image:"/assets/images/bajaj-logo.webp", urlLink:"/new-bikes", id:4, },
+    { title:"Scooter", image:"/assets/images/bajaj-logo.webp", urlLink:"/new-bikes", id:5, },
+    { title:"Electric", image:"/assets/images/bajaj-logo.webp", urlLink:"/new-bikes", id:6, },
+    { title:"all", image:"/assets/images/bajaj-logo.webp", urlLink:"/new-bikes", id:7, },
+  ]
