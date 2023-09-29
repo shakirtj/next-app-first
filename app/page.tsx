@@ -9,8 +9,31 @@ import SquareCard from "./components/SquareCard";
 import { BrandArray } from "./utils/constants";
 import styles from "./index.module.css"
 import CompareCard from "./components/CompareCard";
-export default function Home() {
+export default async function Home() {
+  async function fetchData() {
+    try {
+      const response = await fetch('http://localhost:1337/api/brands?populate[0]=image');
+      
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      const data = await response.json();
+
+      return data
+      // Handle the JSON data here
+      // console.log(data);
+    } catch (error) {
+      // Handle errors here
+      console.error('There was a problem with the fetch operation:', error);
+    }
+  }
+
+  const data = await fetchData()
+
+  // console.log(JSON.stringify(data, null, 2))
   return (
+    
     <>
       <BannerCarousel />
       <div className="container">
@@ -62,12 +85,33 @@ export default function Home() {
               },
             ]}
           >
-            {BrandArray.map((item, index) =>(
-            <SquareCard image_url={item.image } title={item.title} link_url={item.urlLink} />
+            {data.data.map((item:any, index:number) =>(
+            <SquareCard image_url={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.url }`} title={item?.attributes.name} link_url={item?.attributes?.slug} />
             ))}
           </MyCarousel>
         </SectionWrapper>
-        <CompareCard />
+        <SectionWrapper
+        heading="Compare Bike"
+        viewall_title="compare bikes"
+        viewall_url="#"
+        >
+        <MyCarousel
+        autoplay={true}
+        speed={500}
+        arrows={false}
+        slidesToShow={3}
+        slidesToScroll={1}
+        className={styles.compcls}
+        >
+          <CompareCard />
+          <CompareCard />
+          <CompareCard />
+          <CompareCard />
+          <CompareCard />
+        </MyCarousel>
+
+        </SectionWrapper>
+        
       </div>
     </>
   );

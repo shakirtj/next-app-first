@@ -11,3 +11,6 @@
   width: auto;
   margin: 0 auto 10px;
 }
+.SquareCardItem:hover{
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}

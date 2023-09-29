@@ -1,9 +1,63 @@
 .compareCard_Wrp{
-    width: 350px;
-    
+   padding: 15px;
+}
+
+.comapreMain{
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 8px;
 }
 .compareCard_Inner{
   display: flex;
-  box-shadow: 0 4px 20px rgba(0,0,0,.1);
-  padding:5px;
+  position: relative;
+}
+.comapreMain:hover{
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+.vs_text{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-40%);
+  width: 35px;
+  height: 35px;
+  background-color: #232323;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 50%;
+}
+.compareDetails{
+  padding: 25px 4px 0;
+}
+.compareDetails h3{
+  font-size: 16px;
+  font-weight: 700;
+  color: #e77b35;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.compareDetails p{
+  font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.compareDetails span{
+  margin: 5px 0 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 18px;
+    color: #212529;
+    display: block;
+}
+.compareItem{
+  width: 50%;
 }

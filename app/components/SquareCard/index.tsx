@@ -23,7 +23,7 @@ const SquareCard = ({
       <div className={Styles.SquareCardItem}>
         <Link href={link_url}>
           <span>
-            <Image
+            <img
               src={image_url}
               width={width ?? 100}
               height={height ?? 100}
