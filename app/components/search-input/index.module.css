@@ -18,6 +18,7 @@
     width: 100%;
     cursor: auto;
     padding-left: 15px;
+    background: #f7f7f7;
 }
 .SearchInputWrp button{
     background-color: #3e3737;

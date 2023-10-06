@@ -10,13 +10,12 @@ interface bannerimage {
 
 const BannerImage = (props: bannerimage) => {
   return (
-    <Image
+    <img
     src={props.image_src}
     alt="Logo"
     className="logo_mg"
     width={props.width}
     height={props.height || 900}
-    priority
   />
   );
 };

@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #e77b35;
+  --secondry-color: #3e3737;
+  --ternary-color: #f6f6f6;
+  --baseBg-color: #fbfbfb;
+  --hover-color: #eb630b;
+  --border-radius_s: 4px;
+  --border-radius_m: 8px;
+  --border-radius_l: 35px;
+  --rounded-full: 50%;
+  --shadow1: 0 4px 20px rgba(0,0,0,.1);
+  --shadow2: 0 1px 10px rgba(0,0,0,.05);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,.2);
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -45,4 +59,22 @@ body {
 .primary_btn:hover{
   background-color:#eb630b;
     transition: .2s ease-in-out;
+}
+.borderBtn{
+  font-size: 16px;
+  line-height: 36px;
+  padding: 0 15px;
+  border-radius: var(--border-radius_s);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: capitalize;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+  width: 100%;
 }

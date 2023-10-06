@@ -9,6 +9,7 @@ import SquareCard from "./components/SquareCard";
 import { BrandArray } from "./utils/constants";
 import styles from "./index.module.css"
 import CompareCard from "./components/CompareCard";
+import DealerCard from "./components/DealerCard";
 export default async function Home() {
   async function fetchData() {
     try {
@@ -111,7 +112,12 @@ export default async function Home() {
         </MyCarousel>
 
         </SectionWrapper>
-        
+        <SectionWrapper heading="Aprilia Showrooms/Dealers in India" viewall_title="view all aprilia bikes Dealers" viewall_url="aprilia-bike">
+          <div className="flex gap-4 flex-wrap">
+          <DealerCard title="Ather Space , Hindalga"  address="Sri Krishna Weaving Mill Compound,Vengurla Road, Opp Hindalga
+          Ganapathi Temple, Belgaum - 591108" children/>
+          </div>
+        </SectionWrapper>
       </div>
     </>
   );
