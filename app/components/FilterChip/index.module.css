@@ -1,0 +1,19 @@
+.FIlterItem a{
+    font-size: 16px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    display: block;
+    background-color: #fff;
+    text-transform: capitalize;
+    padding: 10px 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-radius: var(--border-radius_s);
+    text-align: center;
+}
+.FIlterItem a:hover{
+    color: #fff; 
+    background-color: var(--primary-color);
+}

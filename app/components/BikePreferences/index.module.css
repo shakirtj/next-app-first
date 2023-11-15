@@ -1,0 +1,11 @@
+.bikePreference_Main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+.bikePreference_inner{
+    width: 20%;
+    padding:0 8px;
+    margin-bottom: 16px;
+}

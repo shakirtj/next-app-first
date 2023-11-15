@@ -28,7 +28,7 @@ const ProductCard = ({
             </div>
             <div className={style.productInfo_wrp}>
               <h3>{title}</h3>
-              {price ? <p>₹ {price}</p> : <p>N/A</p>}
+              {price ? <p>₹ {price} Lakh</p> : <p>N/A</p>}
               <div className={style.keySpecs}>
                 <div className={style.specs}>
                   <Image

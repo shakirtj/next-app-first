@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Link from "next/link";
 
 interface sectionWrapper {
-  heading?: string;
+  heading?: React.ReactElement<typeof Text>;
   viewall_url?: string;
   viewall_title?:string;
   children?: React.ReactNode[] | React.ReactNode;
@@ -16,12 +16,12 @@ const SectionWrapper = ({ heading, viewall_url, viewall_title, children }: secti
       <section
         className={classNames({ [Style.sectionMain]: true, ["pt-2"]: true })}
       >
-        {heading ? <h2>{heading}</h2> : null}
+        {heading ? heading: null}
         {children}
-        <div className={Style.viewall}>
-            {viewall_url ? (<Link href={viewall_url}>{viewall_title}</Link>):null}
+        {viewall_url ? (<><div className={Style.viewall}>
+            <Link href={viewall_url}>{viewall_title}</Link>
             <img src="https://assets.tractorjunction.com/bike-junction/assets/frontend/images/icons/linkarrow.svg?format=png&width=12&height=12" alt="arrow img" />
-        </div>
+        </div></>):null}
       </section>
     </>
   );

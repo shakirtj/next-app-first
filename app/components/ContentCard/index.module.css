@@ -1,0 +1,37 @@
+.collaspe_readMore{
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+}
+.contentSummery{
+    position: relative;
+}
+.contentSummery p{
+    font-size: 12px;
+    margin-top: 0;
+    color: #2d2d2d;
+    line-height: 22px;
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+}
+.contentSummery:before {
+    content: "";
+    position: absolute;
+    height: 45%;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    background: -webkit-linear-gradient(270deg,hsla(0,0%,100%,.001) 30%,#fff 90%);
+    transition: 1s;
+}
+.readMore{
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: .5px;
+    font-weight: 700;
+    display: inline-block;
+}
+

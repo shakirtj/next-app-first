@@ -10,6 +10,8 @@ import { BrandArray } from "./utils/constants";
 import styles from "./index.module.css"
 import CompareCard from "./components/CompareCard";
 import DealerCard from "./components/DealerCard";
+import BikePreferences from "./components/BikePreferences";
+import ContentCard from "./components/ContentCard";
 export default async function Home() {
   async function fetchData() {
     try {
@@ -39,7 +41,7 @@ export default async function Home() {
       <BannerCarousel />
       <div className="container">
         <SectionWrapper
-          heading="Find Your Favourite Bike"
+          heading={<h2>Find Your Favourite Bike</h2>}
           viewall_url="/new-bike"
           viewall_title="View All Popular   Bikes"
         >
@@ -47,7 +49,7 @@ export default async function Home() {
           <BikeNeed />
         </SectionWrapper>
         <SectionWrapper
-          heading="Popular Brands"
+          heading={<h2>Popular Brands</h2>}
           viewall_title="View All Brand"
           viewall_url="#"
         >
@@ -92,7 +94,7 @@ export default async function Home() {
           </MyCarousel>
         </SectionWrapper>
         <SectionWrapper
-        heading="Compare Bike"
+        heading={<h2>Compare Bike</h2>}
         viewall_title="compare bikes"
         viewall_url="#"
         >
@@ -112,12 +114,28 @@ export default async function Home() {
         </MyCarousel>
 
         </SectionWrapper>
-        <SectionWrapper heading="Aprilia Showrooms/Dealers in India" viewall_title="view all aprilia bikes Dealers" viewall_url="aprilia-bike">
+        <SectionWrapper heading={<h2>Aprilia Showrooms/Dealers in India</h2>} viewall_title="view all aprilia bikes Dealers" viewall_url="aprilia-bike">
           <div className="flex gap-4 flex-wrap">
           <DealerCard title="Ather Space , Hindalga"  address="Sri Krishna Weaving Mill Compound,Vengurla Road, Opp Hindalga
           Ganapathi Temple, Belgaum - 591108" children/>
+          <DealerCard title="Ather Space , Hindalga"  address="Sri Krishna Weaving Mill Compound,Vengurla Road, Opp Hindalga
+          Ganapathi Temple, Belgaum - 591108" children/>
+          <DealerCard title="Ather Space , Hindalga"  address="Sri Krishna Weaving Mill Compound,Vengurla Road, Opp Hindalga
+          Ganapathi Temple, Belgaum - 591108" children/>
+          <DealerCard title="Ather Space , Hindalga"  address="Sri Krishna Weaving Mill Compound,Vengurla Road, Opp Hindalga
+          Ganapathi Temple, Belgaum - 591108" children/>
+          <DealerCard title="Ather Space , Hindalga"  address="Sri Krishna Weaving Mill Compound,Vengurla Road, Opp Hindalga
+          Ganapathi Temple, Belgaum - 591108" children/>
+          
           </div>
         </SectionWrapper>
+        <SectionWrapper
+        heading={<h2>Bikes as per your Preference</h2>}
+        >
+          <Tab/>
+         <BikePreferences/>
+        </SectionWrapper>
+        <ContentCard contentHeading={<h1>About BikeJunction</h1>}  children contentText="BikeJunction Is India’s Most Trusted Digital Platform Where You Can Get All The Necessary Information About The Indian And Global 2-Wheeler Market. We Offer A 21st-Century E-Commerce Experience For 2-Wheelers In India. Our Experts At BikeJunction, Conduct Thorough Research To Deliver To Its Customers With Detailed Information Regarding Various 2-Wheelers Available Or Upcoming In The Market. Our Experts Help You Compare And Contrast The Best Bike Models Based On Their Performance, Durability, Mileage, Engine Power, Unique Design, Ergonomics, Safety And More" />
       </div>
     </>
   );
