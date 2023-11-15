@@ -1,0 +1,8 @@
+.mainWrp{
+ display: flex;
+ margin: 0 -8px;
+}
+.innerCard{
+    width: 33.33%;
+    padding: 0 8px;
+}
